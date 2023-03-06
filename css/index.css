@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;0,900;1,500&display=swap');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+:root{
+    --white: #fff;
+    --black: #000;
+    --light-white: #F3F3F3;
+    --light-blue: #45C8FB;
+}
+
+/* Navigation */
+nav{
+    width: 100%;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-white);
+}
+.nav_left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.nav_left a .logo{
+    width: 90px;
+}
+.nav_items{
+    margin-left: 18px;
+}
+.nav_items li{
+    display: inline-block;
+    margin-right: 20px;
+
+}
+.nav_items li a,.nav_right a{
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 600;
+}
+/* Banner section */
+.banner{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url('../assets/images/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.content_items{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content_box h5,.content_box h1{
+    color: var(--white);
+    text-align: center;
+}
+.content_box h1{
+    font-size: 4.8rem;
+    -webkit-text-stroke: 1px var(--white);
+    color: transparent;
+}
+/* LOGIN */
+.login_container{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_container form{
+    width: 400px;
+    height: 350px;
+    background: var(--light-white);
+    overflow: hidden;
+    border-radius: 5px;
+}
+.login_title{
+    width: 100%;
+    height: 98px;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url('../assets/images/bg_3.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_title h1{
+    text-align: center;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+.input_items, .login_btn{
+    padding:8px 15px;
+}
+.label{
+    margin-bottom: 5px;
+}
+.label label{
+    font-size: 12px;
+    font-weight: 600;
+}
+.input_field{
+    position: relative;
+}
+.input_field .eyeOpen{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    cursor: pointer;
+}
+.input_field input,.login_btn button{
+    width: 100%;
+    padding: 9px 8px;
+    border: none;
+}
+.login_btn button{
+    background: var(--light-blue);
+    color: var(--light-white);
+    font-weight: 600;
+}
+.sign_up_msg{
+    padding-top: 8px;
+
+}
+.sign_up_msg p{
+    font-size: 12px;
+}
+.sign_up_msg span a{
+    font-weight: 600;
+    font-size: 12px;
+}

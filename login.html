@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRM - LOGIN</title>
+    <!-- iconscout cdn -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <nav>
+        <div class="nav_left">
+            <a href="./">
+                <img class="logo" src="./assets/images/logo.png" alt="my logo">
+            </a>
+            <ul class="nav_items">
+                <li><a href="./"><span><i class="uil uil-sitemap"></i></span>HRM SITE</a></li>
+                <li><a href="./"><span><i class="uil uil-lightbulb-alt"></i></span>HRM INSIGHT</a></li>
+                <li><a href="./"><span><i class="uil uil-envelope-check"></i></span>HRM MAIL</a></li>
+            </ul>
+        </div>
+        <div class="nav_right">
+            <a href="./login"><span><i class="uil uil-sign-in-alt"></i></span> LOGIN</a>
+        </div>
+    </nav>
+    <div class="login_setion">
+        <div class="login_container">
+            <form action="">
+                <div class="login_title">
+                    <h1>LOGIN</h1>
+                </div>
+                <div class="input_items">
+                    <div class="label">
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input_field">
+                        <input type="text" id="userInput" required>
+                    </div>
+                </div>
+                <div class="input_items">
+                    <div class="label">
+                        <label for="">Password</label>
+                    </div>
+                    <div class="input_field">
+                        <input type="password" id="passwordInput" required>
+                        <span class="eyeOpen"><i class="uil uil-eye" id="eyeShow"></i></span>
+                    </div>
+                </div>
+                <div class="login_btn">
+                    <button type="submit">LOGIN</button>
+                    <div class="sign_up_msg">
+                        <p>Don't have an account? <span><a href="./">SIGN UP</a></span></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
