@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRM - Dashboard</title>
+     <!-- iconscout cdn -->
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+     <!-- favicon -->
+     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="dashboard_container">
+        <div class="dash_left">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <div class="dash_menu">
+                <div class="menu_item">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="uil uil-dashboard"></i>
+                            </span>
+                            <span class="dash_title">
+                                <a href="./">Dashboard</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_item">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="uil uil-home"></i>
+                            </span>
+                            <span class="dash_title">
+                                <a href="./">Home</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_item">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="uil uil-user"></i>
+                            </span>
+                            <span class="dash_title">
+                                <a href="./">User Profile</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_item">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="uil uil-user-arrows"></i>
+                            </span>
+                            <span class="dash_title">
+                                <a href="./">Employee</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_item">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="uil uil-envelope"></i>
+                            </span>
+                            <span class="dash_title">
+                                <a href="./">Email</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_item">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="uil uil-corner-down-left"></i>
+                            </span>
+                            <span class="dash_title">
+                                <a href="./">Leave</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_item">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="uil uil-sign-out-alt"></i>
+                            </span>
+                            <span class="dash_title">
+                                <a href="./">Logout</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dash_right">
+            <div class="dash_nav">
+                <div class="dash_nav_left">
+                    <div class="search">
+                        <input type="text" placeholder="search here">
+                        <button>
+                            <i class="uil uil-search-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="dash_nav_right">
+                    <div class="profile">
+                        <i class="uil uil-bell"></i>
+                        <i class="uil uil-comment-lines"></i>
+                        <div class="user_profile">
+                            <div class="user">
+                                <img src="./assets/images/user_1.jpg" alt="user one">
+                            </div>
+                            
+                        </div>
+                       <div class="userProfileName">
+                        <span>Ebrima</span>
+                        <p>admin</p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dash_detail">
+                <div class="dash_items">
+                    <div class="dash_item">
+                        <h5 class="employee">EMPLOYEES</h5>
+                        <h4>20+</h4>
+                    </div>
+                    <div class="dash_item">
+                        <h5 class="meeting">MEETING</h5>
+                        <h4>1</h4>
+                    </div>
+                    <div class="dash_item">
+                        <h5 class="attend">ATTENDANCE</h5>
+                        <h4>10</h4>
+                    </div>
+                    <div class="dash_item">
+                        <h5 class="leave">LEAVES</h5>
+                        <h4>3</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- data graph -->
+            <div class="dash_graph_container">
+                <div class="graph_left dash_box">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="graph_right dasH_box"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Attendance', 'Leaves', 'Meetings', 'Report', 'Activities', 'Salaries'],
+      datasets: [{
+        label: 'Employees Status',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+    </script>
+</body>
+</html>
